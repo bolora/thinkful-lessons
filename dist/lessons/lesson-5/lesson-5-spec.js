@@ -1,4 +1,4 @@
-describe('Lesson5Ctrl', function() {
+describe('Test of services data in Lesson 5 Controller', function() {
 
 	beforeEach(module('thinkfulLessons'));
 
@@ -9,9 +9,9 @@ describe('Lesson5Ctrl', function() {
       ctrl = $controller('Lesson5Ctrl', {$scope: scope});
     }));	
 
-	it('should ...', inject(function() {
+	it('Search for cats should yield a return', inject(function(lesson5Service) {
 
-		expect(1).toEqual(1);
+		expect(lesson5Service.get("cats").then()).toBeDefined();
 		
 	}));
 

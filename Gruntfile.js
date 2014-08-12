@@ -98,6 +98,7 @@ module.exports = function (grunt) {
       read: {
         options: {
           read:[
+            {selector:'.app-scripts script',attribute:'src',writeto:'appjs'},
             {selector:'script[rel="bower"]',attribute:'src',writeto:'libsjs'},
             {selector:'link[rel="stylesheet"][data-concat!="false"]',attribute:'href',writeto:'appcss'}
           ]
