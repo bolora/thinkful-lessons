@@ -31,14 +31,22 @@
   <script src="app.js"></script>
   <script src="partials/home/home.js"></script>
   <script src="lessons/lesson-5/lesson-5.js"></script>
+  <script src="lessons/lesson-5/lesson-5-service.js"></script>
   <!-- Add New Component JS Above -->
 
   <div>
-    <div id="content" class="container">
-      <div class="row">
+    <div id="content">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/home">Bo Lora's Lessons </a>
+            <p class="navbar-text navbar-right">{{lessonDescription}}</p>
+          </div>
+        </div>
+      </nav>
+
         <div ui-view>
         </div>
-      </div>
     </div>
   </div>
 

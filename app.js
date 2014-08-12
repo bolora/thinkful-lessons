@@ -12,10 +12,11 @@ angular.module('thinkfulLessons').config(function($stateProvider, $urlRouterProv
     });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
+    
 
 });
 
-angular.module('thinkfulLessons').run(function($rootScope) {
+angular.module('thinkfulLessons').run(function($rootScope, $state) {
 
     $rootScope.safeApply = function(fn) {
         var phase = $rootScope.$$phase;
@@ -27,5 +28,7 @@ angular.module('thinkfulLessons').run(function($rootScope) {
             this.$apply(fn);
         }
     };
+
+    console.log($state);
 
 });
