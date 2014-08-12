@@ -6,6 +6,7 @@ angular.module('thinkfulLessons').factory('lesson5Service',function($q, $http, $
 			var images = $q.defer(),
 				endpoint = $interpolate(lesson5Service.endpoint)({tag:tag});
 			$http.jsonp(endpoint).success(function(data){
+				console.log(arguments)
 				images.resolve(data);
 			}).error(function() {
 				console.log("Not found")
