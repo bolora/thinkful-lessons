@@ -5,7 +5,7 @@ angular.module('thinkfulLessons').factory('lesson5Service',function($q, $http, $
 		get: function(tag) {
 			console.log("searching",tag);
 			var images = $q.defer(),
-				endpoint = $interpolate(lesson5Service.endpoint)(tag);
+				endpoint = $interpolate(lesson5Service.endpoint)({tag:tag});
 			$http.jsonp(endpoint).success(function(data){
 				images.resolve(data);
 			});
