@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="thinkfulLessons">
+<head>
+  <title>Thinkful Lessons: Bo Lora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <link href="app.less" type="text/css" rel="stylesheet/less">
+</head>
+<body>
+  <div class="libs">
+    <!-- Livereload script for development only (stripped during dist build) -->
+    <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+    <!-- JS from Bower Components -->
+    <script src="bower_components/less.js/dist/less-1.6.2.js" data-concat="false"></script>
+    <script src="bower_components/jquery/jquery.js" rel="bower">></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js" rel="bower"></script>
+    <script src="bower_components/underscore/underscore.js" rel="bower"></script>
+    <script src="bower_components/moment/moment.js" rel="bower"></script>
+    <script src="bower_components/angular/angular.js" rel="bower"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js" rel="bower"></script>
+    <script src="bower_components/angular-animate/angular-animate.js" rel="bower"></script>
+    <script src="bower_components/angular-resource/angular-resource.js" rel="bower"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js" rel="bower"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js" rel="bower"></script>
+    <!-- Add New Bower Component JS Above -->
+
+  </div>
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="partials/home/home.js"></script>
+  <script src="lessons/lesson-5/lesson-5.js"></script>
+  <!-- Add New Component JS Above -->
+
+  <div>
+    <div id="content" class="container">
+      <div class="row">
+        <div ui-view>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
