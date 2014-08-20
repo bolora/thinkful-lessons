@@ -7124,7 +7124,7 @@ button.close {
   top: 50px;
   width: 100%;
 }
-#unit-2-owa-home button.close {
+#unit-2-owa-home button.close.remove-city {
   position: absolute;
   right: 25px;
   top: 6px;
