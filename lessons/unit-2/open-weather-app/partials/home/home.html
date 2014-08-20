@@ -8,7 +8,7 @@
 					<li ng-repeat="city in selectedCities" class="col-xs-6 col-md-3">
 						<button class="close" title="remove this city" ng-click="removeCity(city)"><i class="fa fa-times"></i></button>
 						<a ui-sref="locationSearch({locationSearch:city})" class="thumbnail">
-							<img ng-src="//maps.googleapis.com/maps/api/staticmap?center={{city}}&zoom=13&size=300x300&maptype=road"/>
+							<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{city}}&zoom=13&size=300x300&maptype=road"/>
 						</a>
 					</li>
 				</ul>
@@ -20,14 +20,14 @@
 						<li ng-repeat="city in noCitiesSelected" class="col-xs-6 col-md-3">
 							<button class="close" title="remove this city"><i class="fa fa-times"></i></button>
 							<a ui-sref="locationSearch({locationSearch:city})" class="thumbnail">
-								<img ng-src="//maps.googleapis.com/maps/api/staticmap?center={{city}}&zoom=13&size=300x300&maptype=road"/>
+								<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{city}}&zoom=13&size=300x300&maptype=road"/>
 							</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<alert type="info" ng-if="!selectedCities && !noCitiesSelected">
-			<img src="//ajaxload.info/cache/FF/FF/FF/00/00/00/1-1.gif"/> Loading ...
+			<img src="img/ajax-loader.gif"/> Loading ...
 			</alert>
 
 

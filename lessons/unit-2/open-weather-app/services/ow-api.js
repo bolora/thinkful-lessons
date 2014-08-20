@@ -1,7 +1,7 @@
 angular.module('openWeatherApp').factory('owApi',function($q, $http) {
 
 	var owApi = {
-		endpoint:"//api.openweathermap.org/data/2.5/{searchType}?q={locationSearch}&callback=JSON_CALLBACK",
+		endpoint:"http://api.openweathermap.org/data/2.5/{searchType}?q={locationSearch}&callback=JSON_CALLBACK",
 		getCurrent: function(locationSearch) {
 			var currentWeather = $q.defer(),
 				endpoint = owApi.endpoint.replace(/\{searchType\}/,"weather").replace(/\{locationSearch\}/,encodeURIComponent(locationSearch));

@@ -1,11 +1,11 @@
 angular.module('openWeatherApp').factory('citiesList',function($http,$q,$timeout) {
 	var endpoints = [
 			{
-				apiUrl:"//api.geonames.org/countryInfoJSON?username=bolora&callback=JSON_CALLBACK",
+				apiUrl:"http://api.geonames.org/countryInfoJSON?username=bolora&callback=JSON_CALLBACK",
 				collection: "world"
 			},
 			{
-				apiUrl:"//api.geonames.org/searchJSON?username=bolora&country=US&cities=cities15000&callback=JSON_CALLBACK",
+				apiUrl:"http://api.geonames.org/searchJSON?username=bolora&country=US&cities=cities15000&callback=JSON_CALLBACK",
 				collection: "us"
 			}
 		],
