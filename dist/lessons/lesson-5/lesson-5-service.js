@@ -1,12 +1,10 @@
-angular.module('thinkfulLessons').factory('lesson5Service',function($q, $http) {
+angular.module('thinkfulLessons').factory('lesson5Service',function($q, $http, $interpolate) {
 
 	var lesson5Service = {
 		endpoint:"https://api.instagram.com/v1/tags/{tag}/media/recent?client_id=1fef2060ae8a4cb58ec392adefe91d58&callback=JSON_CALLBACK",
 		get: function(tag) {
-			console.log("searching",tag);
 			var images = $q.defer(),
-			endpoint = lesson5Service.endpoint.replace(/{tag}/,tag);
-			console.log(endpoint);
+				endpoint = lesson5Service.endpoint.replace(/\{tag\}/,tag);
 			$http.jsonp(endpoint).success(function(data){
 				images.resolve(data);
 			});

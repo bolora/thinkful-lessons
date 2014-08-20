@@ -1,4 +1,4 @@
-angular.module('thinkfulLessons', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('thinkfulLessons', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'openWeatherApp']);
 
 angular.module('thinkfulLessons').config(function($stateProvider, $urlRouterProvider) {
 
