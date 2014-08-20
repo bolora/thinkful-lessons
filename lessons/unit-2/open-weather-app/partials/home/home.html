@@ -6,7 +6,7 @@
 			<div class="row" ng-if="selectedCities">
 				<ul class="list-unstyled">
 					<li ng-repeat="city in selectedCities" class="col-xs-6 col-md-3">
-						<button class="close" title="remove this city" ng-click="removeCity(city)"><i class="fa fa-times"></i></button>
+						<button class="close remove-city" title="remove this city" ng-click="removeCity(city)"><i class="fa fa-times"></i></button>
 						<a ui-sref="locationSearch({locationSearch:city})" class="thumbnail">
 							<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{city}}&zoom=13&size=300x300&maptype=road"/>
 						</a>
@@ -18,7 +18,6 @@
 				<div class="row">
 					<ul class="list-unstyled">
 						<li ng-repeat="city in noCitiesSelected" class="col-xs-6 col-md-3">
-							<button class="close" title="remove this city"><i class="fa fa-times"></i></button>
 							<a ui-sref="locationSearch({locationSearch:city})" class="thumbnail">
 								<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{city}}&zoom=13&size=300x300&maptype=road"/>
 							</a>
