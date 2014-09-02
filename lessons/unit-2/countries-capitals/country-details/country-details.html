@@ -1,0 +1,57 @@
+<div id="country-details" class="container" ng-controller="countryDetailsCtrl">
+	<div ng-if="countryDetails">
+		<h2>{{countryDetails.countryName}}</h2>
+
+		<form class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <label class="col-sm-4 control-label">{{content.population_of_country}}</label>
+		    <div class="col-sm-8">
+		      <p class="form-control-static">{{countryDetails.population | number:0 }}</p>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="col-sm-4 control-label">{{content.area}}</label>
+		    <div class="col-sm-8">
+		      <p class="form-control-static">{{countryDetails.areaInSqKm | sqMiles | number:0 }} squared miles</p>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label class="col-sm-4 control-label">{{content.capital}}</label>
+		    <div class="col-sm-8">
+		      <p class="form-control-static">{{countryDetails.capital}}</p>
+		    </div>
+		  </div>
+		  <!-- <div class="form-group">
+		    <label class="col-sm-4 control-label">{{content.population_of_capital}}</label>
+		    <div class="col-sm-8">
+		      <p class="form-control-static">{{countryDetails.population}}</p>
+		    </div>
+		  </div> -->
+		  <div class="form-group">
+		    <label class="col-sm-4 control-label">{{countryDetails.neigborsCount}} {{content.neighbors}}</label>
+		    <div class="col-sm-8">
+		      <p class="form-control-static">
+		      	<ul class="list-inline">
+		      		<li ng-repeat="neighbor in countryDetails.neighbors">
+		      			<a ui-sref="countryDetails({countryCode:neighbor.countryCode})">{{neighbor.name}}</a><span ng-if="!$last">,</span>
+		      		</li>
+		      	</ul>
+		      </p>
+		    </div>
+		  </div>
+		</form>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="flag">
+					<img ng-src="http://www.geonames.org/flags/x/{{countryDetails.countryCode | lowercase }}.gif" />
+				</div>
+			</div>
+			<div class="col-sm-8">
+				<img ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{countryDetails.countryName}}&size=600x500&maptype=road" class="img-thumbnail"/>
+			</div>
+		</div>
+	</div>
+	<div ng-if="!countryDetails">
+		Loading country details ...
+	</div>
+</div>

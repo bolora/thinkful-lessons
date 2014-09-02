@@ -22,6 +22,10 @@
       {
         "name": "openWeatherApp",
         "file": "lessons\\unit-2\\open-weather-app\\open-weather-app.js"
+      },
+      {
+        "name": "countriesCapitals",
+        "file": "lessons\\unit-2\\countries-capitals\\countries-capitals.js"
       }
     ]
   }
