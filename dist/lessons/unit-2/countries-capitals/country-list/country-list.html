@@ -1,0 +1,25 @@
+<div id="country-list" class="container" ng-controller="CountryListCtrl">
+	<table datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs" class="row-border hover" id="country-list-table">
+        <thead>
+	        <tr>
+	            <th>{{content.name}}</th>
+	            <th>{{content.country_Code}}</th>
+	            <th>{{content.capital}}</th>
+	            <th>{{content.area_in_sq_miles}}</th>
+	            <th>{{content.population}}</th>
+	            <th>{{content.continent}}</th>
+	        </tr>
+        </thead>
+        <tbody>
+	        <tr ng-repeat="country in countries" ng-click="goToDetails(country)">
+	            <td>{{ country.countryName }}</td>
+	            <td>{{ country.countryCode }}</td>
+	            <td>{{ country.capital }}</td>
+	            <td>{{ country.areaInSqKm | sqMiles }}</td>
+	            <td>{{ country.population }}</td>
+	            <td>{{ country.continent }}</td>
+	        </tr>
+        </tbody>
+    </table>
+	
+</div>

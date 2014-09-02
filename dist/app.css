@@ -1,3 +1,4 @@
+@import "bower_components/datatables/media/css/jquery.dataTables.min.css";
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -7259,6 +7260,21 @@ button.close {
   position: absolute;
   top: 50px;
   width: 100%;
+}
+/* Add Component LESS Above */
+/* Component LESS */
+#country-list tbody > tr {
+  cursor: pointer;
+}
+#country-list tbody > tr:hover {
+  background: #55bada;
+}
+#country-details {
+  padding-bottom: 100px;
+}
+#country-details .flag img {
+  width: 200px;
+  float: right;
 }
 /* Add Component LESS Above */
 /* Add Component LESS Above */
